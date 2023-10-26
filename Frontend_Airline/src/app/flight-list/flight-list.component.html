@@ -1,0 +1,38 @@
+<div >
+  <img src="assets/VIEWF.gif" alt="view" width="100%">
+</div>
+<div class=" centered">
+    <div class="panel-heading">
+      <h2 style="color: orangered; font-weight: bold; text-align: center;">List of Flights</h2>
+    </div>
+    <div class="panel-body div">
+      <table >
+        <thead style="color: black;font-size: large;">
+          <tr>
+            <th>Flight Number</th>
+            <th>Flight Name</th>
+            <th>Flight Logo</th>
+            <th>Flight Model</th>
+            <th>Seat Capacity</th>
+            <th>Rate</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights">
+            <td>{{flight.flightNo}}</td>
+            <td>{{flight.flightName}}</td>
+            <td><img [src]="flight?.flightLogo"/></td>
+            <td>{{flight.flightModel}}</td>
+            <td>{{flight.seatCapacity}}</td>
+            <td>{{flight.rate}}</td>
+            
+            <td><button (click)="removeFlight(flight.flightNo)" class="btn btn-danger">Delete</button>
+                <button (click)="modifyFlight(flight.flightNo)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <!-- <button (click)="flightDetails(flight.flightNo)" class="btn btn-info" style="margin-left: 10px">Details</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

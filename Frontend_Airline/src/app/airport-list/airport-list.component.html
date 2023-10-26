@@ -1,0 +1,30 @@
+<img src="assets/addair.gif" alt="view" width="100%" height="100%">
+<div class="centered">
+<div class="panel panel-primary">
+    <div class="panel-heading" >
+      <h2 style="text-align: center;">List of Airports</h2>
+    </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>AirportCode</th>
+            <th>AirportName</th>
+            <th>AirportLocation</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let airport of airports">
+            <td>{{airport.airportCode}}</td>
+            <td>{{airport.airportName}}</td>
+            <td>{{airport.airportLocation}}</td>
+            <td><button (click)="removeAirport(airport.airportCode)" class="btn btn-danger">Delete</button>
+              <button (click)="modifyAirport(airport.airportCode)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <!-- <button (click)="airportDetails(airport.airportCode)" class="btn btn-info" style="margin-left: 10px">Details</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

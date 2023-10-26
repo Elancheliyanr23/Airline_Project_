@@ -1,0 +1,29 @@
+table tr td   {
+  color: black;
+}
+*{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  color:rgb(31, 28, 27);
+}
+.container {
+  position: relative;
+}
+.centered {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 59%;
+  left: 75%;
+  width: 50%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+}
+button{
+  border-radius: 4%;
+}
+.error {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}

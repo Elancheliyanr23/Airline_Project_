@@ -1,0 +1,33 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+   
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 3%;
+  }
+  
+  .centered {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: black;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  button{
+    
+    border-radius: 14%;
+    margin: 20% 0% 0% 35%;
+  
+  
+  }
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+  }

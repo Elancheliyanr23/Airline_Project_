@@ -1,0 +1,124 @@
+<h3>Create Booking</h3>
+<div class="container card shadow-lg p-3 mb-5 bg-white rounded">
+  <h3 class="font-weight-bold">Search Schedule Flights</h3>
+  <section style="border: 2px solid black; padding: 20px;">
+    <form>
+        <label>Schedule Flight ID: </label>
+        <input type="number" class="form-control" type="number" [(ngModel)]="scheduleFlightId" [ngModelOptions]="{standalone: true}" required>
+      
+        <input type="submit" value="SEARCH" class="btn btn-primary" (click)="searchScheduleFlight(scheduleFlightId)" [disabled]="!scheduleFlightId">
+        <br><br>
+        <div *ngIf="show">
+        <label><b>Details: </b></label><br>
+        <label>Source Airport: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.schedule.srcAirport.airportLocation}} readonly>
+        <br>
+        <label>Destination Airport: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.schedule.dstnAirport.airportLocation}} readonly>       
+        <br>
+        <label>Departure Time: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.schedule.deptDateTime}} readonly>
+        <br>
+        <label>Arrival Time: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.schedule.arrDateTime}} readonly>
+        <br>
+        <label>Flight ID: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.flight.flightNo}} readonly>
+        <br>
+        <label>Available Seats: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.availableSeats}} readonly>
+        <br>
+        <label>Schedule ID: </label>
+        <input type="text" class="form-control" value={{scheduleFlight.schedule.scheduleId}} readonly>
+        <div class="invalid-feedback">Please fill out this field.</div>
+        <br>
+        <div>
+          <button type="button" (click)="bookNow()" class="cncBtn btn btn-primary   ">Book Now</button>
+        </div>
+      </div>
+  </form>
+</section>
+</div>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group">
+      <label for="name">Booking ID</label>
+      <input type="text" class="form-control" id="bookingId" required [(ngModel)]="booking.bookingId" name="bookingId">
+    </div> -->
+    <!-- <div class="form-group">
+      <label for="name">Passenger Name</label>
+      <input type="text" class="form-control" id="passengerName" required [(ngModel)]="booking.passengerName" name="passengerName">
+    </div>
+    <div class="form-group">
+      <label for="name">Passengers Age</label>
+      <input type="text" class="form-control" id="passengerAge" required [(ngModel)]="booking.passengerAge" name="passengerAge">
+    </div>
+    <div class="form-group">
+      <label for="name">Passengers Gender</label>
+      <input type="text" class="form-control" id="passengerGender" required [(ngModel)]="booking.passengerGender" name="passengerGender">
+    </div>
+    <div class="form-group">
+      <label for="name">Passengers Email</label>
+      <input type="text" class="form-control" id="passengerEmail" required [(ngModel)]="booking.passengerEmail" name="passengerEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Passenger Phone</label>
+      <input type="text"  class="form-control" id="passengerPhone" required [(ngModel)]="booking.passengerPhone" name="passengerPhone">
+    </div>
+
+    <div class="form-group">
+      <label for="name">No of Passengers</label>
+      <input type="text" class="form-control" id="noOfPassengers" required [(ngModel)]="booking.noOfPassengers" name="noOfPassengers">
+    </div> -->
+<!-- 
+    <div class="form-group">
+      <label for="name">Departure</label>
+      <input type="text" class="form-control" id="Departure" required [(ngModel)]="booking.noOfPassengers" name="Departure">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Arrival</label>
+      <input type="text" class="form-control" id="Arrival" required [(ngModel)]="booking.noOfPassengers" name="Arrival">
+    </div> -->
+    <!-- <div class="form-group">
+      <label for="name">Booking ID</label>
+      <input type="text" class="form-control" id="bookingId" required [(ngModel)]="booking.bookingId" name="bookingId">
+    </div>
+
+     <div class="form-group">
+      <label for="name">Booking Date</label>
+      <input type="date"  min={{minDate}} class="form-control" id="bookingDate" required [(ngModel)]="booking.bookingDate" name="bookingDate">
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label for="name">No of Passengers</label>
+      <input type="text" class="form-control" id="noOfPassengers" required [(ngModel)]="booking.noOfPassengers" name="noOfPassengers">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Departure</label>
+      <input type="text" class="form-control" id="Departure" required [(ngModel)]="booking.noOfPassengers" name="Departure">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Arrival</label>
+      <input type="text" class="form-control" id="Arrival" required [(ngModel)]="booking.noOfPassengers" name="Arrival">
+    </div>
+    <div class="form-group">
+      <label for="name">Arrival</label>
+      <input type="text" class="form-control" id="Arrival" required [(ngModel)]="booking.noOfPassengers" name="Arrival">
+    </div>
+    <div class="form-group">
+      <label for="name">Arrival</label>
+      <input type="text" class="form-control" id="Arrival" required [(ngModel)]="booking.noOfPassengers" name="Arrival">
+    </div> -->
+ <br>
+
+    <!-- <button type="submit" class="btn btn-success">Book Now</button> -->
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>

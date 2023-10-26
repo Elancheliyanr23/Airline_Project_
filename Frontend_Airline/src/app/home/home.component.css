@@ -1,0 +1,32 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+h3{
+  color:rgb(255, 115, 0);
+}
+a{
+  /* background-color: cadetblue; */
+  color: rgb(16, 1, 1);
+}
+.centered {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+.button{
+  
+  border-radius: 14%;
+ margin: 21% 44% 3% 30%;
+
+
+}
