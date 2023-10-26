@@ -1,0 +1,37 @@
+<img src="assets/UPDATEFLIGHT.gif" alt="view" height="900vh" width="1550vh">
+<div class=" centered">
+<h3 style="text-align: center;">Update Flight</h3>
+<div class="container" style="width: 400px;margin-left: auto;margin-right: auto;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Flight Number</label>
+            <input [disabled]="true" type="text" class="form-control" id="flightNo" required [(ngModel)]="flight.flightNo" name="flightNo">
+          </div>
+      <div class="form-group">
+        <label for="name">Flight Name</label>
+        <input type="text" class="form-control" id="flightName" required [(ngModel)]="flight.flightName" name="flightName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Flight Logo</label>
+        <input type="text" class="form-control" id="flightLogo" required [(ngModel)]="flight.flightLogo" name="flightLogo">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Flight Model</label>
+        <input type="text" class="form-control" id="flightModel" required [(ngModel)]="flight.flightModel" name="flightModel">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Rate</label>
+        <input type="text" class="form-control" id="rate" required [(ngModel)]="flight.rate" name="rate">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Seat capacity</label>
+        <input type="text" class="form-control" id="seatCapacity" required [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

@@ -1,0 +1,27 @@
+
+  *{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    /* color:rgb(161, 137, 5); */
+  }
+  .container {
+    position: relative;
+  }
+  .centered {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    width: 30%;
+    height: 115%;
+    transform: translate(-50%, -50%);
+  }
+  button{
+    border-radius: 4%;
+  }
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+  }

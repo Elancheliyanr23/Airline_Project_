@@ -1,0 +1,30 @@
+*{
+  color: black;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+img{
+  width:207vh;
+  height:90vh;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: black;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+#box{
+  width: 70%;
+  height: 100%;
+}
+.row{
+  width: 500%;
+}

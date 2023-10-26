@@ -1,0 +1,47 @@
+table  {
+  text-align: center;
+  width:100%;
+  border: 1px solid black;
+}
+th tr td{
+  padding: 2px;
+  text-align: center;
+
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+   
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    
+    padding: 3%;
+  }
+  
+  .centered {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button{
+    
+    border-radius: 14%;
+    margin: 0%;
+  
+  
+  }
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+  }
+  view{
+    width: 250%;
+  }

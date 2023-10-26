@@ -1,0 +1,62 @@
+<style>
+  #opacity-3 {
+    opacity: 0.6 !important;
+  }
+</style>
+<div class="view">
+  <img src="assets/shot_1.gif " alt="view" />
+
+  <div class="centered">
+    <div class="p-3"  id="box" style="opacity: 1;">   
+    <div class="container"></div>
+    <br />
+    <div>
+      <div class="content-center">
+        <div class="row">
+          <div class="col-sm-6" style="text-align: center">
+            <button type="button" class="btn btn-light" (click)="addFlight()">
+              Add A Flight</button
+            ><br /><br />
+            <button type="button" class="btn btn-light" (click)="viewFlight()">
+              View Flights Available</button
+            ><br /><br />
+            <button type="button" class="btn btn-light" (click)="addAirport()">
+              Add An Airport</button
+            ><br /><br />
+            <button type="button" class="btn btn-light" (click)="viewAirport()">
+              View Airports Available</button
+            ><br /><br />
+          </div>
+          <div class="col-sm-3" style="text-align: center">
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="addScheduledFlight()"
+            >
+              Schedule A Flight</button
+            ><br /><br />
+            <!-- <button type = "button" class = "btn btn-light" (click)="searchScheduledFlight()">Search Scheduled Flight</button><br><br> -->
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="viewScheduledFlight()"
+            >
+              View Scheduled Flight</button
+            ><br /><br />
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="modifyScheduledFlight()"
+            >
+              Modify Scheduled Flight</button
+            ><br /><br />
+            <button type="button" class="btn btn-light" (click)="listBooking()">
+              Passengers List</button
+            ><br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
